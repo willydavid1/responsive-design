@@ -1,0 +1,429 @@
+/* Reglas
+Selectores
+Declaraciones
+propiedades 
+valores de CSS */
+
+
+/* header
+{
+    background: pink;
+    color: red;
+} */
+
+/*  gris oscuro = #1d252c
+    gris claro = #626262 resulto ser #fafafa
+    background gris = #1b2127
+    celeste = #026fff */
+
+body
+{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5{
+    font-family: 'Fjalla One', sans-serif; /* define el tipo de fuente */
+    font-weight: normal; /* define el grueso. esto equivale a 400 */
+}
+
+h1
+{
+    font-size: 40px; /* define el tamaño del texto  */
+    line-height: 1.5; /* define la altura entre lineas  */
+    letter-spacing: -.2px; /* define el espaciado entre letras*/
+    color: white;
+    margin: 0;
+    /* margin: 100px 150px 70px 30px; */
+    /* text-transform: capitalize; transforma el texto a mayus. o minuscula  */
+    /* text-decoration: underline;  */
+}
+
+h1 strong
+{
+    color: #026fff;
+}
+
+h2
+{
+    color: #026fff;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+/* width (ancho) y height (alto). */
+.hero
+{
+    height: 300px;
+    /* background-image: url(../images/hero.jpg); */
+    background-color: #1b2127;
+    /* background-size: 500px 300px; */
+    /* background-repeat: no-repeat; */
+    /* background-position-x: right; */
+    display: flex;
+    align-items: center; /* para alinear el h1 */
+    justify-content: space-between;
+}
+
+/* imagenes para que se coma y respete las dimensiones */
+.hero-image
+{
+    object-fit: cover;
+}
+
+.portfolio
+{
+    background-color: #fafafa;
+    padding: 20px;
+}
+
+.project
+{
+    /* border-top: 10px solid red;
+    border-right: 10px solid green;
+    border-left: 10px solid orange;
+    border-bottom: 10px solid pink; 
+    border-top-color: red;
+    border-top-width: 15px;
+    border-top-style: solid;
+    border-top-left-radius: 50px; */
+    border: 1px solid gray;
+    border-radius: 10px;
+    /* margin: 10px; */
+    margin-bottom: 15px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-course,
+.project-date,
+.project-url
+{
+    margin: 10px 0;
+}
+
+.project strong
+{
+    font-family: 'Fjalla One', sans-serif; /* define el tipo de fuente */
+}
+
+.project-description
+{
+    font-size: 20px;
+}
+
+.project-title
+{
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.project-details
+{
+    width: 500px;
+}
+
+.project-imageContainer
+{
+    width: 500px;
+}
+
+
+.header
+{
+    background-color: #1b2127;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* esto separa el img con el nav */
+    align-items: center; /* centra la img y no pierde efecto el nav */
+    height: 70px; /* definimos el alto de todo el header */
+}
+.header a:hover
+{
+    background-color: white;
+    color: black;
+}
+
+
+/* le quitamos a las listas el margen el padding y los numeros */
+ol,ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* le quitamos los margenes a figure */
+figure
+{
+    margin: 0;
+}
+
+
+
+
+.menu
+{
+    height: inherit;
+}
+
+.header ol
+{
+    display: flex;
+    height: inherit;
+    
+}
+.header ol li
+{
+    height: inherit;
+}
+
+/* aqui modificamos mas exacto los enlaces dentro del header */
+.header a 
+{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: inherit;
+    padding: 0 10px;
+}
+
+.flexbox
+{
+    display: flex;
+    /* flex-direction: column; define la direccion del display si en colunma o en fila*/
+    /* flex-wrap: nowrap; quiere decir que ese elemento nunca caiga cuando el contenido sobre pase la pantalla y es el que tiene por defecto */
+    flex-wrap: wrap; /* cuando no cabe un elemento en nuestra pantalla se corre el siguiente hacia abajo */
+}
+
+.box 
+{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 1px solid red;
+    flex-shrink: 0; /* capacidad de encogimiento de este elemento */
+}
+
+.footer
+{
+    color: white;
+    background-color: #1b2127;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer img
+{
+    vertical-align: middle;
+}
+
+.footer a
+{
+    color: white;
+}
+
+/* este es el titulo */
+.event-list-title
+{
+    margin-left: 20px;
+}
+
+.event-list
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.event
+{
+    /* border: 1px solid red; */
+    margin: 10px;
+    width: 480px;
+    border-radius: 10px;
+    overflow: hidden; /* cuando un elemento se desborde del padre se va a ocultar */
+    flex-shrink: 0; /* para que ocupen su tamaño y no se encojan */
+    background-color: #f4fbff;
+    /* background-color: red; este rojo fue una prueba para distinguir el event, de event-detail */
+}
+
+.event img /* aca podia aplicar cambios directamente a la clase pero lo hice asi xD */
+{
+    width: 480px; /* ancho  */
+    height: 200px; /* alto  */
+    object-fit: cover;
+}
+
+.event-detail
+{
+    margin: 20px 40px;
+    background-color: white;
+    margin-top: -40px;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.event-description
+{
+    text-align: left;
+}
+
+.event-url
+{
+    color: #056fff;
+    border: 1px solid #056fff;
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.event-url:hover
+{
+    background-color: #056fff;
+    color: white;
+}
+
+/* seccion de contacto */
+.contact
+{
+    background-color: #056fff;
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* aqui modificamos el input */
+.form-email input
+{
+    border-color:gray;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px 20px 10px 25px;
+    background-image: url('../images/envelope.svg'); /* esta es la imagen que tiene el mensaje */
+    background-size: 15px 15px; /* tamaño del icono */
+    background-repeat: no-repeat; /* para que no se repita la imagen */
+    background-position-y: center; /* posicionamos la img en el centro del eje y este => | */
+    background-position-x: 5px; /* corremos la img a la derecha */
+}
+
+/* boton del form de la seccion de contact */
+.form-email button
+{
+    display: block;
+    background: transparent;
+    color: white;
+    padding: 10px 0px;
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 10px;
+    border: 1px solid white;
+    /* margin: 10px auto 0; */
+}
+
+.form-email h3
+{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.social
+{
+    /* border: 1px solid red; */
+}
+
+.social-link
+{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid white; */
+    margin: 0 10px; /* para separar los elementos, las imagenes de redes sociales */
+    background-size: 50px 50px; /* Le damos tamaño a las imagenes svg  */
+}
+
+.social-link.twitter
+{
+    background-image: url('../images/twitter.svg');
+}
+
+.social-link.facebook
+{
+    background-image: url('../images/facebook.svg');
+}
+
+.social-link.github
+{
+    background-image: url('../images/github.svg');
+}
+
+.social-link.instagram
+{
+    background-image: url('../images/instagram.svg');
+}
+
+.container
+{
+    /* border: 1px solid red; */
+    width: 1000px;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+}
+
+
+
+
+/* de aqui pa bajo estas dos lineas de codigo son mis prototipos para hacer las lineas azules
+del lado izquierdo las intente hacer colocandole ancho y altos a los div,
+sobreponiendos con margenes negativos y con otras cositas, mi pregunta es como puedo yo 
+lograr hacer esa linea azul correctamente. */
+
+
+.linea-azul
+{
+    /* border: 1px solid red; */
+    background-color: #056fff;
+    width: 38px;
+    height: 2002px;
+    margin-bottom: -2002px;
+    margin-left: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.puntos
+{
+    /* border: 1px solid green; */
+    background-color: #056fff;
+    width: 74px;
+    height: 43px;
+    margin-top: 33px;
+    border-radius: 76px;
+    /* margin-bottom: -1921px; */
+    margin-left: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+} 
